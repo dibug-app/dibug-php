@@ -14,5 +14,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "ext-curl": "*",
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "7.5.x-dev"
+    }
 }
