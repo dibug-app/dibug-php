@@ -17,7 +17,7 @@ class GuzzleAdapter extends DibugAdapter
     public function send(mixed $body): void
     {
         $this->client->request('POST', $this->serverUrl, [
-            "body" => $body
+            "json" => $body
         ]);
     }
 }
