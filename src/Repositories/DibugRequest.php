@@ -12,9 +12,13 @@ class DibugRequest
         private DibugFormatter $formatter
     ) {}
 
-    public function send(mixed $variable): DibugResponse
+    public function send(mixed $variable, array|null $file, int|null $line): DibugResponse
     {
-        $this->adapter->send($this->formatter->format($variable));
+        $this->adapter->send($this->formatter->format(
+            variable: $variable,
+            file: $file,
+            line: $line
+        ));
         return new DibugResponse();
     }
 }
